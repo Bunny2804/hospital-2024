@@ -6,27 +6,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
-
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 
-
 @Entity
-@Table(name = "operations")
-public class Operations {
-
+@Table(name = "users")
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private String code;
 
-    @Column(name = "date_created")
-    private Date dateCreated;
-
-    @ManyToOne
-    @JoinColumn(name = "diagnos_id")
-    private Diagnosis diagnosis;
 }

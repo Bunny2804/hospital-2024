@@ -22,15 +22,18 @@ public class Appointments {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
+
     private String description;
+
     @Column(name = "date_created")
     private Date dateCreated;
 
-    @OneToMany(mappedBy = "appointments")
-    private List<Patient> patientList;
+    @OneToOne
+    @MapKey
+    @MapsId
+    @JoinColumn(name = "id")
+    private Diagnosis diagnosis;
 
-    @ManyToOne
-    @JoinColumn(name = "patient_id")
-    private Patient patient;
 }

@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.Set;
 
 @Setter
 @Getter
@@ -25,8 +26,8 @@ public class Diagnosis {
     private String name;
     private String description;
 
-    @OneToMany(mappedBy = "diagnosis") // diagnosis -> Medicine
-    private List<Medicine> madicineList;
+//    @OneToMany(mappedBy = "diagnosis") // diagnosis -> Medicine
+//    private List<Medicine> madicineList;
 
     @OneToMany(mappedBy = "diagnosis") // diagnosis -> Operations
     private List<Operations> operationseList;
@@ -36,5 +37,12 @@ public class Diagnosis {
 
     @OneToMany(mappedBy = "diagnosis") // diagnosis -> DiagnosisHasAppointment
     private List<DiagnosisHasAppointment> diagnosisHasAppointmentList;
+
+    @ManyToOne
+    @JoinColumn(name = "patient_id")
+    private Patient patients;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Set<Medicine> madicines;
 
 }

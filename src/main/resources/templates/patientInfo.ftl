@@ -40,18 +40,11 @@
         </div>
         <div class="card-body">
             <div class="mb-3">
-                <span class="label">Ім'я:</span> Іван Петрович Сидоренко
+                <span class="label">Ім'я:</span> ${patients.firstName+ " " +patients.lastName}
             </div>
             <div class="mb-3">
-                <span class="label">Вік:</span> 45 років
+                <span class="label">Вік:</span> ${patients.age} років
             </div>
-            <div class="mb-3">
-                <span class="label">Стать:</span> Чоловік
-            </div>
-            <div class="mb-3">
-                <span class="label">Номер картки:</span> 123456
-            </div>
-        </div>
     </div>
     <div class="card mb-4">
         <div class="card-header bg-success text-white">
@@ -75,7 +68,6 @@
             <div class="mb-3">
                 <span class="label">Операції:</span> Немає
             </div>
-            <div class="section-title">Історія лікування:</div>
             <div class="mb-3">
                 <span class="label">Дата початку лікування:</span> 15.05.2024
             </div>

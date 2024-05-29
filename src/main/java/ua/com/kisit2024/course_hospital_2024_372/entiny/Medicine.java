@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Setter
 @Getter
 @NoArgsConstructor
@@ -21,10 +23,14 @@ public class Medicine {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String description;
 
-    @ManyToOne
-    @JoinColumn(name = "diagnos_id")
-    private Diagnosis diagnosis;
+
+//    @ManyToOne
+//    @JoinColumn(name = "diagnos_id")
+//    private Diagnosis diagnosis;
+
+    @ManyToMany(mappedBy = "madicines")
+    private Set<Diagnosis> diagnosisSet;
+
 
 }

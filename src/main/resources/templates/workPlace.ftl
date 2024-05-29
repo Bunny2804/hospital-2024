@@ -62,63 +62,24 @@
     <h2 class="text-center my-4">Список пацієнтів</h2>
     <div class="row">
         <!-- Карта 1 -->
+
+        <#if patients??>
+            <#list patients as ppp>
         <div class="col-12">
             <div class="card">
-                <div class="card-header bg-primary text-white">
-                    Іван Петрович Сидоренко
-                </div>
+                <div class="card-header bg-primary text-white">${ppp.firstName+ " " +ppp.lastName }</div>
                 <div class="card-body">
                     <div class="mb-3">
-                        <span class="label">Вік:</span> 45 років
-                    </div>
-                    <div class="mb-3">
-                        <span class="label">Стать:</span> Чоловік
-                    </div>
-                    <div class="mb-3">
-                        <span class="label">Номер картки:</span> 123456
-                    </div>
+                        <span class="label">Вік:</span> ${ppp.age} років</div>
+                    <form action="patient/${ppp.id}" method="get">
+                        <input type="submit" value="Info">
+
+                    </form>
                 </div>
             </div>
         </div>
-        <!-- Карта 2 -->
-        <div class="col-12">
-            <div class="card">
-                <div class="card-header bg-primary text-white">
-                    Ольга Сергіївна Коваль
-                </div>
-                <div class="card-body">
-                    <div class="mb-3">
-                        <span class="label">Вік:</span> 30 років
-                    </div>
-                    <div class="mb-3">
-                        <span class="label">Стать:</span> Жінка
-                    </div>
-                    <div class="mb-3">
-                        <span class="label">Номер картки:</span> 789012
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Карта 3 -->
-        <div class="col-12">
-            <div class="card">
-                <div class="card-header bg-primary text-white">
-                    Петро Андрійович Іванов
-                </div>
-                <div class="card-body">
-                    <div class="mb-3">
-                        <span class="label">Вік:</span> 60 років
-                    </div>
-                    <div class="mb-3">
-                        <span class="label">Стать:</span> Чоловік
-                    </div>
-                    <div class="mb-3">
-                        <span class="label">Номер картки:</span> 345678
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        </#list>
+        </#if>
     <div class="btn-container">
         <button class="btn-add">Додати пацієнта</button>
     </div>

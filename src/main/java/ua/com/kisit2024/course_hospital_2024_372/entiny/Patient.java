@@ -25,13 +25,22 @@ public class Patient {
 
     @Column(name = "first_name")
     private String firstName;
+
     @Column(name = "last_name")
     private String lastName;
+
     private Long age;
 
     @OneToMany(mappedBy = "patient")
     private List<DiagnosisHasAppointment> diagnosisHasAppointmentList;
+//
+//    @ManyToOne
+//    @JoinColumn(name = "appointment_id")
+//    private Appointments appointments;
+    @OneToMany(mappedBy = "patients")
+    public List<Diagnosis> diagnosisList;
+
     @ManyToOne
-    @JoinColumn(name = "appointment_id")
-    private Appointments appointments;
+    @JoinColumn(name = "doctor_id")
+    private Doctor doctor;
 }

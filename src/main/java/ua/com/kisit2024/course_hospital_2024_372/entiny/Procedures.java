@@ -20,7 +20,6 @@ public class Procedures {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String description;
 
     @ManyToOne
     @JoinColumn(name = "diagnos_id")
