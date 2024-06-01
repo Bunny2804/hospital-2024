@@ -45,6 +45,7 @@
             <div class="mb-3">
                 <span class="label">Вік:</span> ${patients.age} років
             </div>
+        </div>
     </div>
     <div class="card mb-4">
         <div class="card-header bg-success text-white">
@@ -70,9 +71,6 @@
             </div>
             <div class="mb-3">
                 <span class="label">Дата початку лікування:</span> 15.05.2024
-            </div>
-            <div class="mb-3">
-                <span class="label">Лікуючий лікар:</span> д-р Олексій Коваленко
             </div>
         </div>
     </div>

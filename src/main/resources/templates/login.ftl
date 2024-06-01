@@ -54,13 +54,15 @@
 <h1 style="font-size: 48px; color: #d3c6e3">WW HELP YOU</h1>
 <div class="login">
     <form id="loginForm" action="/login" method="post">
-        <label for="phone">Телефон:</label>
-        <input type="tel" id="phone" name="phone" required><br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
 
         <label for="password">Пароль:</label>
         <input type="password" id="password" name="password" required><br>
 
         <button type="submit">Увійти</button>
+
+        <a href="registration">Зареєструватись</a>
     </form>
 </div>
 
