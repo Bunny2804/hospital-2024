@@ -24,7 +24,7 @@
             border-radius: 8px;
             margin-right: 20px;
             width: 25%;
-            border: 2px solid #8e53e7; /* Фіолетовий бордер */
+            border: 2px solid #8e53e7;
         }
         .sidebar h3 {
             color: #8e53e7;
@@ -39,7 +39,7 @@
         .sidebar ul li a {
             color: #8e53e7;
             text-decoration: none;
-            font-size: 18px; /* Збільшений розмір тексту */
+            font-size: 18px;
         }
         .sidebar ul li a:hover {
             text-decoration: underline;
@@ -66,21 +66,31 @@
         h1, h2 {
             color: #974f9f;
         }
+        .btn-primary {
+            background-color: #8e53e7;
+            color: white;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #6a3cb4;
+            color: white;}
     </style>
 </head>
 <body>
 <div class="main-container">
-    <!-- Sidebar -->
     <div class="sidebar">
         <h3>Особистий кабінет лікаря</h3>
         <ul>
+            <li><a href="#personal-info">Особиста інформація</a></li>
+            <li><a href="#doctor-info">Інформація про лікарів</a></li>
+            <li><a href="#operations">Операції</a></li>
+            <li><a href="#appointments">Призначення</a></li>
             <li><a href="#discharges">Виписки</a></li>
             <li><a href="#medications">Ліки</a></li>
-            <li><a href="#patients">Пацієнти</a></li>
+            <li><a href="/workPlace">Пацієнти</a></li>
         </ul>
     </div>
 
-    <!-- Main Content -->
     <div class="container position-relative">
         <h1 class="text-center mb-4">WW HELP YOU</h1>
         <h2 class="text-center my-4">Список пацієнтів</h2>

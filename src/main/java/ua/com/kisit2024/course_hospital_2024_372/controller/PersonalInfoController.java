@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class PersonalInfoController {
     @GetMapping("/personal-info")
     public String getPersonalInfo(){
-        return "personalInfo";
+        return "personal-info";
     }
 }
 

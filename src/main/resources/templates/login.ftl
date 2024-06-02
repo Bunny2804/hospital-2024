@@ -54,7 +54,7 @@
 <h1 style="font-size: 48px; color: #d3c6e3">WW HELP YOU</h1>
 <div class="login">
     <form id="loginForm" action="/login" method="post">
-        <label for="username">Username:</label>
+        <label for="username">Логін:</label>
         <input type="text" id="username" name="username" required><br>
 
         <label for="password">Пароль:</label>

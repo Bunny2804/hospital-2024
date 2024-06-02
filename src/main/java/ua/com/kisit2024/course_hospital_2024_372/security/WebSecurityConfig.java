@@ -57,7 +57,7 @@ public class WebSecurityConfig {
                                 .requestMatchers("/patientInfo",
                                         "/saveNewCategory","/category-admin","/deleteCategory","/deleteAllCategory"
                                         ,"/product-manager", "/saveNewProduct", "/updateProduct", "/deleteProduct", "/saveFromExcel",
-                                        "/upload","/workPlace"
+                                        "/upload","/workPlace","/personal-info"
                                 )
                                 .hasRole("Doctor")
                                 .requestMatchers("/admin", "/admin-users","/update-users","/update-roles-users")
@@ -67,7 +67,7 @@ public class WebSecurityConfig {
                 )
                 .formLogin((form)-> form
                         .loginPage("/login")
-                        .defaultSuccessUrl("/")
+                        .defaultSuccessUrl("/personal-info")
                         .permitAll()
 
                 )

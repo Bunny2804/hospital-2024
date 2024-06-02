@@ -14,7 +14,7 @@
         }
 
         .container {
-            background:#cccccc;
+            background-color: #ddcaff;
             margin-top: 20px;
             padding: 20px;
             border-radius: 8px;
@@ -29,13 +29,35 @@
             font-weight: bold;
             color: #777;
         }
+        .btn-action {
+            background-color: #8e53e7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .btn-action:hover {
+            background-color: #6a3cb4;
+        }
+        .form-section {
+            background-color: #ffd1dc;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .card-header-bg {
+            background-color: #8e53e7 !important;
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1 class="text-center mb-4 ">WW HELP YOU</h1>
+    <h1 class="text-center mb-4">WW HELP YOU</h1>
     <div class="card mb-4">
-        <div class="card-header bg-primary text-white">
+        <div class="card-header bg-primary text-white card-header-bg">
             Основна інформація
         </div>
         <div class="card-body">
@@ -48,32 +70,42 @@
         </div>
     </div>
     <div class="card mb-4">
-        <div class="card-header bg-success text-white">
+        <div class="card-header bg-success text-white card-header-bg">
             Медична інформація
         </div>
         <div class="card-body">
-            <div class="section-title">Діагнози:</div>
-            <div class="mb-3">
-                <span class="label">Поточний діагноз:</span> Гострий бронхіт
+            <div class="form-section">
+                <div class="mb-3">
+                    <label for="currentDiagnosis" class="label">Поточний діагноз:</label>
+                    <input type="text" id="currentDiagnosis" name="currentDiagnosis" class="form-control" placeholder="Введіть поточний діагноз">
+                </div>
             </div>
             <div class="mb-3">
-                <span class="label">Попередні діагнози:</span> Гіпертонія, Остеохондроз
+                <label for="previousDiagnosis" class="label">Попередні діагнози:</label>
+                <span>Гіпертонія, Остеохондроз</span>
             </div>
-            <div class="section-title">Призначення:</div>
-            <div class="mb-3">
-                <span class="label">Ліки:</span> Амоксицилін, Парацетамол
-            </div>
-            <div class="mb-3">
-                <span class="label">Процедури:</span> Інгаляції
-            </div>
-            <div class="mb-3">
-                <span class="label">Операції:</span> Немає
-            </div>
-            <div class="mb-3">
-                <span class="label">Дата початку лікування:</span> 15.05.2024
+            <div class="form-section">
+                <div class="section-title">Призначення:</div>
+                <div class="mb-3">
+                    <label for="medications" class="label">Ліки:</label>
+                    <input type="text" id="medications" name="medications" class="form-control" placeholder="Введіть ліки">
+                </div>
+                <div class="mb-3">
+                    <label for="procedures" class="label">Процедури:</label>
+                    <input type="text" id="procedures" name="procedures" class="form-control" placeholder="Введіть процедури">
+                </div>
+                <div class="mb-3">
+                    <label for="operations" class="label">Операції:</label>
+                    <input type="text" id="operations" name="operations" class="form-control" placeholder="Введіть операції">
+                </div>
+                <div class="mb-3">
+                    <label for="startDate" class="label">Дата початку лікування:</label>
+                    <input type="date" id="startDate" name="startDate" class="form-control">
+                </div>
             </div>
         </div>
     </div>
+    <button class="btn btn-action" onclick="location.href='/workPlace';">Виписати</button>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
